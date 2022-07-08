@@ -4,9 +4,9 @@ Regular expression (known as RegEx) is a pattern of characters used to validate 
 
 ## Summary
 
-An email RegEx uses specific characters to encode the input address. Below is our example:
+A RegEx for emails uses specific characters to encode the input address. Below is our example:
 
-
+`/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
 
 ## Table of Contents
 
@@ -31,7 +31,11 @@ An email RegEx uses specific characters to encode the input address. Below is ou
 
 ### Anchors
 
+The begining of the string is identified by the caret `^` and the end of the string is identified by the dollar sign `$`
+
 ### Quantifiers
+
+```+``` is used to communicate there is another sequence to be matched as a greedy quantifier. ```{2,6}``` is another greedy quantifer used to specify the input that there should be a minimum of 2 characrtors to a maximum of 6 characters.
 
 ### OR Operator
 
