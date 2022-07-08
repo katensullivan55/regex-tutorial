@@ -53,13 +53,30 @@ In regex for JavaScript, there's a total of 6 flags, with each having a differen
 
 ### Grouping and Capturing
 
+There are three groups that are being captured in this example. The first group is the username of the e-mail account ```[a-z0-9_\.-]```. The second group captures the domain name being used ```[\da-z\.-]```. The third group captures the domain extention, ".com" ```[a-z\.]{2,6}```.
+
 ### Bracket Expressions
+
+There are 3 bracket expressions within the example listed above. The information in the bracket expressions is opened and closed between brackets ```[]```. This indentifies which information is allowed to be matched.
+
+*1st Expression:* ```[a-z0-9_\.-]``` - includes case sensitive characters from a-z and also numbers from 0-9 an underscore along with periods and hyphens.
+
+*2nd Expression:* ```[\da-z\.-]``` - includes all digits, case sensitive characters from a-z, periods, and hyphens
+
+*3rd Expression:* ```[a-z\.]``` - includes case sensitive characters from a-z and periods.
 
 ### Greedy and Lazy Match
 
+Lazy quantifiers marked. So far in this example, we have only used greedy quantifiers ```+``` and ```{}```. If these quantifiers were lazy quantifiers, they would appear as ```+?``` or ```{}?``` meaning it will direct the system to make the shortest match possible.
+
 ### Boundaries
 
+Boundaries ```\b``` make assertions about what can be matched to the left and right of the current position. In non-Unicode mode, it matches a position where only one side is an ASCII letter, digit or underscore. In Unicode mode, it matches a position where only one side is a Unicode letter, digit or underscore. ```\B```
+Replace both ```^``` and ```$``` with ```\b```. 
+
 ### Back-references
+
+Back-references are regex commands which refer to a previous part of the matched regular expression. Back-references are specified with backslash and a single digit: ```\1```. 
 
 ### Look-ahead and Look-behind
 
