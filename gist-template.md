@@ -80,6 +80,8 @@ Back-references are regex commands which refer to a previous part of the matched
 
 ### Look-ahead and Look-behind
 
+Lookahead and lookbehind, also known as lookaround, are zero-length assertions just like the start and end of line, and start and end with word anchors explained earlier in this tutorial. These return only the result 'match' or 'no match'. That is why they are called “assertions”, don't consume characters in the string.
+
 ## Author
 
 My name is Kate, and I am a coding bootcamp student. [Github](https://github.com/katensullivan55)
