@@ -6,7 +6,7 @@ Regular expression (known as RegEx) is a pattern of characters used to validate 
 
 A RegEx for emails uses specific characters to encode the input address. Below is our example:
 
-`/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
+```/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/```
 
 ## Table of Contents
 
@@ -31,7 +31,7 @@ A RegEx for emails uses specific characters to encode the input address. Below i
 
 ### Anchors
 
-The begining of the string is identified by the caret `^` and the end of the string is identified by the dollar sign `$`
+The begining of the string is identified by the caret ```^``` and the end of the string is identified by the dollar sign ```$```
 
 ### Quantifiers
 
@@ -39,9 +39,17 @@ The begining of the string is identified by the caret `^` and the end of the str
 
 ### OR Operator
 
+Use the ```|``` operator (logical OR) to match characters or expression of either the left or right of the ```|``` operator.
+
 ### Character Classes
 
+The period symbol ```.``` will match any character except line breaks. in our example the ```.``` actually refers to the periods in the email and are not a character class.
+
 ### Flags
+
+Flags are optional and change its behavior of searching; flags are denoted using a single lowercase alphabetic character. To give multiple flags to a regex, we write them one after another (without any spaces or other delimiters). 
+
+In regex for JavaScript, there's a total of 6 flags, with each having a different purpose.
 
 ### Grouping and Capturing
 
